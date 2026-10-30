@@ -202,7 +202,10 @@ class AdapterPayloads(unittest.TestCase):
             text, usage, images = gemini_provider.GeminiProvider().chat("m", [{"role": "user", "content": content}], "key")
         parts = seen["contents"][0].parts
         self.assertEqual(parts[0].text, "look")
-        self.assertEqual((parts[1].data, parts[1].mime_type), (b"vid", "video/mp4"))
+        self.assertEqual(
+            (parts[1].inline_data.data, parts[1].inline_data.mime_type),
+            (b"vid", "video/mp4"),
+        )
 
     def test_openai_adapter_builds_image_url_and_rejects_video(self):
         from llm_hub.providers import openai_provider
