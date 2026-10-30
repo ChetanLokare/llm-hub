@@ -1,0 +1,13 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.8,<3.0
+
+keyring>=25,<27
+
+openai>=1.40,<3.0
+anthropic>=0.34,<1.0
+google-genai>=1.0,<2.0
+
+# Optional but recommended: lets text-only models read PDFs and spreadsheets you attach
+pypdf>=5,<7
+openpyxl>=3.1,<4

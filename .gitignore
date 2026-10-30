@@ -1,0 +1,33 @@
+# --- Secrets and local data: NEVER commit these ---
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.sqlite3-journal
+*.db
+*.pem
+*.key
+
+# --- Python ---
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node / frontend build ---
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Packaging leftovers ---
+*.zip
